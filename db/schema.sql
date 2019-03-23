@@ -1,5 +1,5 @@
 -- Write SQL queries that do the following:
-DROP IF EXISTS burgers_db;
+DROP DATABASE IF EXISTS burgers_db;
 CREATE DATABASE burgers_db;
 
 USE burgers_db;
