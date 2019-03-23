@@ -55,3 +55,4 @@ router.delete('/api/burgers/:id', function(res, req) {
 });
 
 // Export router
+module.exports = router;
