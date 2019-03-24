@@ -4,17 +4,17 @@ const router = express.Router();
 const burger = require('../models/burger.js');
 
 // Create router for app
-router.get('/', function(res, req) {
+router.get('/', function(req, res) {
     burger.all(function(result) {
         const obj = {
-            burgers: data
+            burgers: result
         };
         console.log(obj);
-        res.prependListener('index', obj);
-    })
+        res.json(obj);
+    });
 });
 
-router.post('/api/burgers', function(res, req) {
+router.post('/api/burgers', function(req, res) {
     burger.create([
         'name', 'devoured'
     ], [
@@ -24,7 +24,7 @@ router.post('/api/burgers', function(res, req) {
     });
 });
 
-router.put('/api/burgers/:id', function(res, req) {
+router.put('/api/burgers/:id', function(req, res) {
     const condition = "id = " + req.params.id;
 
     console.log("condition", condition);
@@ -41,7 +41,7 @@ router.put('/api/burgers/:id', function(res, req) {
     }); 
 });
 
-router.delete('/api/burgers/:id', function(res, req) {
+router.delete('/api/burgers/:id', function(req, res) {
     const condition = "id = " + req.params.id;
 
     burger.delete(condition, function(result) {
