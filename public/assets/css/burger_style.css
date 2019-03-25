@@ -5,5 +5,36 @@ body
 }
 h1
 {
-
+    text-align: center;
+    font-size: 75px;
+}
+h2
+{
+    font-size: 28px;
+}
+#orderUp
+{
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+#devoured
+{
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+#addABurger
+{
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+#burger
+{
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
 }

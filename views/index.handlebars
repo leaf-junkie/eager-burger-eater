@@ -1,6 +1,8 @@
 <h1>Eager Burger Eater</h1>
 
-<h2>Order's up!</h2>
+<div>
+    <h2 id="orderUp">Order's up!</h2>
+</div>
 
 <ul>
   {{#each burgers}}
@@ -10,7 +12,9 @@
   {{/each}}
 </ul>
 
-<h2>Devoured</h2>
+<div>
+    <h2 id="devoured">Devoured</h2>
+</div>
 
 <ul>
   {{#each burgers}}
@@ -20,7 +24,10 @@
   {{/each}}
 </ul>
 
-<h2>Add a burger</h2>
+<div id="addABurger">
+    <h2>Add a burger</h2>
+</div>
+
 <form class="create-form">
 
     <div class="form-group">
@@ -35,4 +42,5 @@
 
     <button id="burgerButton" type="submit">Add burger</button>
 </form>
-<img id="burger animation" src="https://webstockreview.net/images/animated-clipart-burger-6.gif">
+<img id="burger" src="https://webstockreview.net/images/animated-clipart-burger-6.gif">
+{{!-- <img id="hotdog" src="http://bestanimations.com/Food/FastFood/HotDogs/hot-dog-animated-gif-12.gif"> --}}
